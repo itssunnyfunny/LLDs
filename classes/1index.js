@@ -63,12 +63,7 @@ class Charactor {
 const hero = new Charactor('hero',' hero' , 50);
 const villen = new Charactor('villen', 'villen', 70);
 
-console.log(hero, villen);
-console.log(hero.attack(villen));
-console.log(villen.attack(hero));
-console.log(villen.heal(50));
-console.log(hero.health);
-console.log(villen.health);
+
 
 
 
