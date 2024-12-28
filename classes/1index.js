@@ -63,7 +63,13 @@ class Charactor {
 const hero = new Charactor('hero',' hero' , 50);
 const villen = new Charactor('villen', 'villen', 70);
 
+// what is the probem with this 
 
+
+
+
+
+// i don't know
 
 
 
