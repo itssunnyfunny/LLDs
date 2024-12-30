@@ -76,7 +76,44 @@ class studentPassed extends student {
  }
 
 // static
-// static is methods which is directolly attached to class itself not with the objects
-// which is created by the class
+// static is method or property which is directly attached to class itself not with the objects
+// which is created by the class and don't depent on the data - it remains same
+
+class cars {
+    constructor(model, color, buildIn){
+        this.model = model
+        this.color = color
+        this.buildIn = buildIn
+    }
+
+    allAbout(){
+        return `${this.model} is build in ${this.buildIn} with the ${this.color} in color`
+    }
+    static fact(){
+        return 'first car company is Peugeot founded in 1810 '
+    }
+}
 
 // private - # 
+// if you what a property or method  is not directly modified or get but can be access within the class
+// it helps in hiding the implementation of the class and internal details
+
+  class employees {
+    #salary;
+    constructor(name, num){
+           this.name = name
+           this.num = num
+           this.#salary = 10000
+    } 
+
+    promotion(percent){
+       const increase =  this.#salary*percent/100
+       this.#salary += increase
+       return `${this.name} is promoted by ${percent}% now his salary is ${this.#salary}`
+    }
+  }
+
+  const firstem = new employees('shani', 12,)
+
+  
+  
