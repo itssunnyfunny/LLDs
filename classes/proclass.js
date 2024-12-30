@@ -47,10 +47,36 @@ class animal {
 // inheritance - extends 
 // using the logic of a class and extends its properties and methods to build out new class
 
+class studentPassed extends student {
+    constructor(){
+        this.ispassed = false
+    }
+
+   ispasses(passed){
+         this.ispassed = passed
+         return `${this.name} is passed`
+    }
+}
+
 // super()
 // is is specically used for using any logic which parent have to use in the child class
+ class birds extends animal {
+      constructor(name,color){
+        
+        super(name)
+        this.color = color
+        this.species = 'birds'
+      }
+   
+    speciesof(){
+        const info = super.info()
+        return `${info} and ${this.color} in color`
 
+    }
+ }
 
 // static
+// static is methods which is directolly attached to class itself not with the objects
+// which is created by the class
 
 // private - # 
