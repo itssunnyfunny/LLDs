@@ -74,6 +74,28 @@ const car = new Car('Tesla', 's-3')
 // Medium //
 
 
+//6 extend Car class in to electric
+
+class ElectricCar extends Car {
+    constructor(Brand, Model,BatteryCapacity){
+        super(Brand, Model)
+        this.BatteryCapacity = BatteryCapacity
+    }
+    getRenge(){
+        return this.BatteryCapacity * 5;
+    }
+   getDetails(){
+    const getDetails = super.getDetails()
+    return `${getDetails} brateryCapacity of ${this.BatteryCapacity}`
+   }
+}
+
+const electric = new ElectricCar('Tata','nexon',20)
+
+console.log(electric);
+console.log(electric.getDetails());
+console.log(electric.getRenge());
+
 
 
 
