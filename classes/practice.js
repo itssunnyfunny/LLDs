@@ -111,10 +111,55 @@ class Person {
     }
 }
 
-const myself = new Person('shani',111)
- myself.age = 12;
-console.log(myself.name);
-console.log(myself.age);
+// const myself = new Person('shani',111)
+//  myself.age = 12;
+// console.log(myself.name);
+// console.log(myself.age);
+
+
+// 10 Bank Account Samulation
+
+class Bank {
+    constructor(name,balance){
+        this.name  = name
+        this._balance = balance
+    }
+    deposit(amount){
+        this._balance += amount
+        return `in th account of ${this.name} ${amount} is deposited`
+    }
+    withdraw(amount){
+        this._balance -= amount
+        return `in the account of ${this.name} ${amount} is withdraw`
+    }
+
+    get balance(){
+        return this._balance
+    }
+
+    static transfer(fromAccount , toAccount , amount){
+        fromAccount.withdraw(amount) 
+        toAccount.deposit(amount)
+
+        return `now ${fromAccount.name}'s account  have ${fromAccount._balance} and  ${toAccount.name} account have ${toAccount._balance}`
+    }
+};
+
+const shani = new Bank('shani',100);
+const ravi  = new Bank('ravi' , 100);
+
+console.log(shani, ravi);
+console.log(shani.deposit(100));
+console.log(ravi.withdraw(50));
+console.log(shani.balance, ravi.balance);
+console.log(Bank.transfer(shani, ravi,50));
+
+
+
+
+
+
+
 
 
 
