@@ -92,10 +92,29 @@ class ElectricCar extends Car {
 
 const electric = new ElectricCar('Tata','nexon',20)
 
-console.log(electric);
-console.log(electric.getDetails());
-console.log(electric.getRenge());
+//7 age as a private property
 
+class Person {
+    
+    constructor(name,age){
+        this.name = name
+        this._age = age
+    }
+    get age(){
+        return `${this._age}`
+    }
+    set age(newAge){
+        if (typeof newAge !== "number"|| newAge <=0) {
+            return ` please provide age greater than 0`
+        }
+       this._age = newAge
+    }
+}
+
+const myself = new Person('shani',111)
+ myself.age = 12;
+console.log(myself.name);
+console.log(myself.age);
 
 
 
