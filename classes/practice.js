@@ -137,7 +137,40 @@ class User {
 // console.log(upMy);
 
 
+// 9 polymorphism of sounds
 
+class Animal {
+    speak(){
+        return `generic sound of a animal`
+    }
+}
+
+class Dog extends Animal{
+    speak(){
+        return `woof!`
+    }
+};
+
+class Cat extends Animal{
+    speak(){
+        return 'Meow'
+    }
+}
+
+function makeAnimalSpeack(animals) {
+    for (const animal of animals) {
+        console.log(animal.speak());
+        
+    }
+};
+
+const animals = [
+    new Dog(),
+    new Cat(),
+    new Animal()
+]
+
+makeAnimalSpeack(animals) // i don't understand it property 
 
 
 // 10 Bank Account Samulation
