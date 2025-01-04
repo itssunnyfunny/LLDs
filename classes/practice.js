@@ -48,7 +48,32 @@ const cir = new Circle(12)
 // console.log(cir.circumference());
 
 
-//4 
+//4 Car 
+
+class Car {
+    constructor(Brand, Model){
+        this.Brand = Brand
+        this.Model = Model
+    }
+    getDetails(){
+        return `this car's brand name is ${this.Brand} and ${this.Model} model`
+    }
+    // 5
+    start(){
+        return `Car is starting`
+    }
+
+}
+
+
+const car = new Car('Tesla', 's-3')
+// console.log(car);
+// console.log(car.getDetails());
+// console.log(car.start());
+
+// Medium //
+
+
 
 
 
