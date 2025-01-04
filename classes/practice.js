@@ -22,9 +22,34 @@ class Rectangle {
 
 const are = new Rectangle(55, 105)
 const sque = new Rectangle(55,55)
-console.log(are.area());
-console.log(Rectangle.isSquere(are));
-console.log(Rectangle.isSquere(sque));
+// console.log(are.area());
+// console.log(Rectangle.isSquere(are));
+// console.log(Rectangle.isSquere(sque));
+
+
+//3 Circle
+
+class Circle {
+    static PI = Math.PI
+
+    constructor(radius){
+        this.radius = radius 
+    
+    }
+    circumference(){
+      return  2* this.radius* Circle.PI 
+    }
+}
+// Circle.PI because it belog to the class not the object created from it.
+
+const cir = new Circle(12)
+// console.log(cir);
+
+// console.log(cir.circumference());
+
+
+//4 
+
 
 
 
