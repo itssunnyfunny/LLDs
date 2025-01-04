@@ -117,6 +117,29 @@ class Person {
 // console.log(myself.age);
 
 
+// 8 Factory method role changing
+class User {
+    constructor(username , role){
+        this.username = username
+        this.role = role
+    }
+
+    static createAdmin(username){
+     return   new User(username,"admin")
+    }
+
+}
+
+// const my  = new User('uganda','user');
+// console.log(my);
+// console.log();
+// const upMy = User.createAdmin(my.username)
+// console.log(upMy);
+
+
+
+
+
 // 10 Bank Account Samulation
 
 class Bank {
@@ -148,11 +171,11 @@ class Bank {
 const shani = new Bank('shani',100);
 const ravi  = new Bank('ravi' , 100);
 
-console.log(shani, ravi);
-console.log(shani.deposit(100));
-console.log(ravi.withdraw(50));
-console.log(shani.balance, ravi.balance);
-console.log(Bank.transfer(shani, ravi,50));
+// console.log(shani, ravi);
+// console.log(shani.deposit(100));
+// console.log(ravi.withdraw(50));
+// console.log(shani.balance, ravi.balance);
+// console.log(Bank.transfer(shani, ravi,50));
 
 
 
