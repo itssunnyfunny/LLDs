@@ -1,7 +1,7 @@
 export interface Borrowable {
     id : string;
     title: string;
-    abailable: boolean;
+    available: boolean;
     borrow(): void;
     return(): void;
 }
