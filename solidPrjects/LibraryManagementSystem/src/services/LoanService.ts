@@ -1,4 +1,4 @@
-import { IRepository } from "./IRepository";
+import { IRepository } from "../repositories/IRepository";
 import { Borrowable } from "../models/Barrowable";
 
 

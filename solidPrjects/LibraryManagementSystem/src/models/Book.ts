@@ -2,7 +2,7 @@ import { Borrowable } from "./Barrowable";
 
 export class Book implements Borrowable {
 
-    constructor(public id: string, public title: string, public available: boolean) {}
+    constructor(public id: string, public title: string, public available: boolean = true) {}
 
     borrow(): void {
         if (!this.available) {
